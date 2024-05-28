@@ -81,6 +81,7 @@ let plants = [];
 function restartLife() {
   herbivores = [];
   plants = [];
+  // Create the initial herbivores and plants
   for (let i = 0; i < NUM_HERBIVORES; i++) {
     herbivores.push(new Herbivore(random(GRID_SIZE), random(GRID_SIZE)));
   }
@@ -97,14 +98,6 @@ function noMoreLife(){
 
 function setup() {
   createCanvas(GRID_SIZE * 10, GRID_SIZE * 10);
-  // Create the initial herbivores and plants
-  for (let i = 0; i < NUM_HERBIVORES; i++) {
-    herbivores.push(new Herbivore(random(GRID_SIZE), random(GRID_SIZE)));
-  }
-
-  for (let i = 0; i < NUM_PLANTS; i++) {
-    plants.push(new Plant(random(GRID_SIZE), random(GRID_SIZE)));
-  }
 }
 
 function draw() {
